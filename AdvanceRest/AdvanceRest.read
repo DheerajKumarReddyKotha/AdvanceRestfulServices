@@ -1,0 +1,18 @@
+1. ParamConverters
+	a) ParamConverter - It is an interface that converts string to custom data type.
+	b) ParamConverterProvider - 
+	
+	We need to create a class which implements ParamConverterProvider.
+
+2. Message Body Readers and Message Body Writers.
+ 	It is applicable for POST and PUT which has a body.	
+ 	MessageBodyWriter
+3. Custom Media Types
+	It helps to create a new mediaType
+	
+4. JAX-RS Client
+     Client client=ClientBuilder.newClient(); --> It is an interface
+     
+     Response response = cliemt.target("url").request().get();
+     Message message = response.readEntity(Message.class);
+     System.out.println(message.getMessage());

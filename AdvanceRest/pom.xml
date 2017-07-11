@@ -21,7 +21,6 @@
 			<artifactId>grizzly-http-server</artifactId>
 			<version>2.3.31</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.bundles/jaxrs-ri -->
 		<dependency>
 			<groupId>org.glassfish.jersey.bundles</groupId>
