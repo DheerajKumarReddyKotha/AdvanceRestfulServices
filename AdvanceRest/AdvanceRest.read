@@ -1,3 +1,5 @@
+REST API s are state less.
+
 1. ParamConverters
 	a) ParamConverter - It is an interface that converts string to custom data type.
 	b) ParamConverterProvider - 
@@ -16,3 +18,23 @@
      Response response = cliemt.target("url").request().get();
      Message message = response.readEntity(Message.class);
      System.out.println(message.getMessage());
+5. How to POST?
+   Response postresponse = MessageTarget.request().post(Entity.json(newmessage));
+6. Invocations in JAX-RS Client
+7. Generic Types
+    List<Message> messages = client.target("http://....")
+    							.path("messages")
+    							.queryParam("year",2015)
+    							.request(MediaType.APPLICATION_JSON)
+    							.get(new GenericType<List<Message>>() { });
+8. Authentication (Implementing filters)
+9. Classic Session based authentication
+10. Basic Access Authentication
+     username:password (convert to base64 encoding)-> convert to Authorization: Basic dxNIcm5hb
+     The above process is not secure, to protect this we use HTTPS
+11. Digest Access authentication
+12. Asymetric cryptography
+13. OAuth
+14. Interceptor manipulate input and out streams (reader interceptor, writer interceptor) and filters manipulate request and response.
+15. 
+
